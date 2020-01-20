@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PizzaOrderController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <GridPane prefHeight="820.0" prefWidth="1000.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="40.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="145.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="396.0" minWidth="10.0" prefWidth="396.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="126.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="125.0" minHeight="10.0" prefHeight="81.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="193.0" minHeight="10.0" prefHeight="81.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="277.0" minHeight="10.0" prefHeight="233.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="277.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="277.0" minHeight="0.0" prefHeight="64.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="143.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="143.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="143.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="143.0" minHeight="10.0" prefHeight="97.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="143.0" minHeight="10.0" prefHeight="97.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="39.0" prefWidth="106.0" text=" SIZE:" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman Bold" size="35.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label GridPane.columnIndex="2" />
+            <Label prefHeight="53.0" prefWidth="447.0" text="PLEASE DESIGN YOUR DESIRED PIZZA" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="Times New Roman Bold" size="23.0" />
+               </font>
+            </Label>
+            <GridPane GridPane.columnIndex="2" GridPane.rowIndex="2">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="0.0" prefWidth="20.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="101.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="234.0" minWidth="10.0" prefWidth="208.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="70.0" minHeight="1.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="139.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="110.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="36.0" prefWidth="96.0" text="Cheese:" textAlignment="CENTER" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Times New Roman Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="36.0" prefWidth="121.0" text="Pepperoni:" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Times New Roman Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="36.0" prefWidth="96.0" text="Ham:" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Times New Roman Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="cheeseSingle" mnemonicParsing="false" text="Single" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Cheese" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="cheeseDouble" mnemonicParsing="false" text="Double" toggleGroup="$Cheese" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <RadioButton fx:id="cheeseTriple" mnemonicParsing="false" text="Triple" toggleGroup="$Cheese" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="130.0" />
+                     </GridPane.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="pepperoniNone" mnemonicParsing="false" text="None" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Pepperoni" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="pepperoniSingle" mnemonicParsing="false" text="Single" toggleGroup="$Pepperoni" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="80.0" />
+                     </GridPane.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="pepperoniDouble" mnemonicParsing="false" text="Double" toggleGroup="$Pepperoni" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="40.0" />
+                     </GridPane.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="pepperoniTriple" mnemonicParsing="false" text="Triple" toggleGroup="$Pepperoni" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="130.0" />
+                     </GridPane.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="hamNone" mnemonicParsing="false" text="None" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Ham" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="hamSingle" mnemonicParsing="false" prefHeight="21.0" prefWidth="79.0" text="Single" toggleGroup="$Ham" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="80.0" />
+                     </GridPane.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="hamDouble" mnemonicParsing="false" text="Double" toggleGroup="$Ham" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="40.0" />
+                     </GridPane.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="hamTriple" mnemonicParsing="false" text="Triple" toggleGroup="$Ham" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="130.0" />
+                     </GridPane.margin>
+                  </RadioButton>
+               </children>
+            </GridPane>
+            <Label prefHeight="39.0" prefWidth="357.0" text="Choose Your Toppings:" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman Bold" size="35.0" />
+               </font>
+            </Label>
+            <TextField fx:id="orderNumber" promptText="1" text="1" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+            <Label prefHeight="39.0" prefWidth="152.0" text="Quantity:" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman Bold" size="35.0" />
+               </font>
+            </Label>
+            <Button fx:id="saveLineItem" mnemonicParsing="false" prefHeight="60.0" prefWidth="247.0" text="SAVE LINEITEM" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Button>
+            <Label prefHeight="48.0" prefWidth="153.0" text="Cost of Current Order:" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="costTextT" editable="false" prefHeight="31.0" prefWidth="288.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label prefHeight="39.0" prefWidth="232.0" text="Total Orders:" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Times New Roman Bold" size="30.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="orderText" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+            <Label prefHeight="39.0" prefWidth="232.0" text="Total Cost:" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <font>
+                  <Font name="Times New Roman Bold" size="30.0" />
+               </font>
+            </Label>
+            <TextField fx:id="totalCost" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <RadioButton fx:id="sizeSmall" mnemonicParsing="false" text="SMALL">
+                     <GridPane.margin>
+                        <Insets left="25.0" />
+                     </GridPane.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Size" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="sizeMedium" mnemonicParsing="false" text="MEDIUM" toggleGroup="$Size" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="25.0" />
+                     </GridPane.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="sizeLarge" mnemonicParsing="false" text="LARGE" toggleGroup="$Size" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="25.0" />
+                     </GridPane.margin>
+                  </RadioButton>
+               </children>
+            </GridPane>
+            <Button fx:id="saveAll" mnemonicParsing="false" prefHeight="37.0" prefWidth="148.0" text="SAVE ORDERS" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="9">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Button>
+            <Label prefHeight="48.0" prefWidth="100.0" text="Cost Per Pizza:" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="costTextP" editable="false" prefHeight="31.0" prefWidth="288.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <ImageView fx:id="pImage" fitHeight="170.0" fitWidth="195.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="30.0" top="90.0" />
+               </GridPane.margin>
+            </ImageView>
+         </children>
+      </GridPane>
+   </children>
+</GridPane>
